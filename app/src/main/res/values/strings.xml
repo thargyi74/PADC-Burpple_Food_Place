@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Burpple</string>
+    <string name="explore">Explore</string>
+    <string name="all_guides">All Guides</string>
+    <string name="activity">Activity</string>
+    <string name="profile">Profile</string>
+    <string name="open_gallery">Open Gallery</string>
+    <string name="featured">FEATURED</string>
+    <string name="promotion">Promotions</string>
+    <string name="see_more">See More</string>
+    <string name="latest">LATEST</string>
+    <string name="burpple_guides">Burpple Guides</string>
+    <string name="new_trending"><![CDATA[New & Trending]]></string>
+    <string name="explore_neighbourhoods">Explore Neighbourhoods</string>
+    <string name="explore_categories">Explore Categories</string>
+    <string name="dummy_pro_item_name"><![CDATA[Wildfire Chicken & ...]]></string>
+    <string name="kent_ridge_txt">Kent Ridge</string>
+    <string name="bupple_exclusive_txt">BURPPLE EXCUSIVE</string>
+    <string name="item_name_txt">1-for-1 Shabu Burger</string>
+    <string name="promotion_date_txt">TILL 31ST JAN\'18</string>
+    <string name="month_txt">DECEMBER</string>
+    <string name="newly_opene">burpple</string>
+    <string name="newly_opened_small_txt">Newly Opened</string>
+    <string name="news_and_trending_item_txt">Sushi Kimura</string>
+    <string name="explore_txt">EXPLORE</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

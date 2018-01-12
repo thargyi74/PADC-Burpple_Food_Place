@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_explore"
+        android:icon="@drawable/ic_explore_24dp"
+        android:title="@string/explore" />
+
+    <item
+        android:id="@+id/navigation_all_guides"
+        android:icon="@drawable/ic_import_contacts_24dp"
+        android:title="@string/all_guides" />
+
+    <item
+        android:id="@+id/navigation_to_gallery"
+        android:icon="@drawable/ic_add_box_24dp"
+        android:title="@string/open_gallery" />
+
+
+    <item
+        android:id="@+id/navigation_activity"
+        android:icon="@drawable/ic_subject_24dp"
+        android:title="@string/activity" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_person_24dp"
+        android:title="@string/profile" />
+
+</menu>

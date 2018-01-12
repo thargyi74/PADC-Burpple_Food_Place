@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.yeminnaing.burpplefoodplace.activities.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="256dp"
+            app:contentScrim="?attr/colorPrimary"
+            app:titleEnabled="false"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_highlight_food_places_images"
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax" />
+
+            <com.yeminnaing.burpplefoodplace.components.PageIndicatorView
+                android:id="@+id/piv_high_light_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/margin_medium_2" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
+
+            <com.arlib.floatingsearchview.FloatingSearchView
+                android:id="@+id/floating_search_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:floatingSearch_close_search_on_keyboard_dismiss="true"
+                app:floatingSearch_leftActionMode="showSearch"
+                app:floatingSearch_searchBarMarginLeft="@dimen/search_view_inset"
+                app:floatingSearch_searchBarMarginRight="@dimen/search_view_inset"
+                app:floatingSearch_searchBarMarginTop="36dp"
+                app:floatingSearch_searchHint="Search e.g. Japanese in Orchard"
+                app:floatingSearch_showSearchKey="false"
+                app:floatingSearch_suggestionsListAnimDuration="250" />
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large">
+
+            <TextView
+                android:id="@+id/lbl_promotion_featured"
+                style="@style/CategoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_medium_2_n"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:text="@string/featured" />
+
+            <TextView
+                android:id="@+id/lbl_promotions"
+                style="@style/CategoryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_below="@id/lbl_promotion_featured"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:text="@string/promotion" />
+
+            <TextView
+                android:id="@+id/see_more_for_promotions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignRight="@id/lbl_promotions"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="@string/see_more"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_regular_2x" />
+
+            <com.yeminnaing.burpplefoodplace.components.SmartRecyclerView
+                android:id="@+id/rv_promotions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbl_promotions"
+                android:layout_marginTop="@dimen/margin_medium_2" />
+
+            <TextView
+                android:id="@+id/lbl_latest_burpple_guides"
+                style="@style/CategoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rv_promotions"
+                android:layout_marginBottom="@dimen/margin_medium_2_n"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:text="@string/latest" />
+
+            <TextView
+                android:id="@+id/lbl_burpple_guides"
+                style="@style/CategoryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_below="@id/lbl_latest_burpple_guides"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:text="@string/burpple_guides" />
+
+            <TextView
+                android:id="@+id/see_more_for_burpple_guides"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rv_promotions"
+                android:layout_marginLeft="92dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_toEndOf="@id/lbl_burpple_guides"
+                android:text="@string/see_more"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_regular_2x" />
+
+            <com.yeminnaing.burpplefoodplace.components.SmartRecyclerView
+                android:id="@+id/rv_burpple_guides"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbl_burpple_guides"
+                android:layout_marginTop="@dimen/margin_medium_2" />
+
+            <TextView
+                android:id="@+id/lbl_new_trending_latest"
+                style="@style/CategoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rv_burpple_guides"
+                android:layout_marginBottom="@dimen/margin_medium_2_n"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:text="@string/latest" />
+
+            <TextView
+                android:id="@+id/lbl_new_trending"
+                style="@style/CategoryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_below="@id/lbl_new_trending_latest"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:text="@string/new_trending" />
+
+            <com.yeminnaing.burpplefoodplace.components.SmartRecyclerView
+                android:id="@+id/rv_new_trending"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbl_new_trending"
+                android:layout_marginBottom="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2" />
+
+            <ImageView
+                android:id="@+id/iv_divider_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rv_new_trending"
+                android:src="@drawable/divider_margin_horizontal_line" />
+
+            <TextView
+                android:id="@+id/btn_explore_neighbourhoods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_divider_1"
+                android:layout_marginBottom="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:drawableLeft="@drawable/ic_location_24dp"
+                android:drawablePadding="@dimen/margin_medium_2"
+                android:drawableTint="@color/secondary_text"
+                android:text="@string/explore_neighbourhoods"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/text_regular_3x" />
+
+            <ImageView
+                android:id="@+id/iv_divider_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_explore_neighbourhoods"
+                android:src="@drawable/divider_margin_horizontal_line" />
+
+            <TextView
+                android:id="@+id/btn_explore_categories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_divider_2"
+                android:layout_marginBottom="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:drawableLeft="@drawable/ic_restaurant_24dp"
+                android:drawablePadding="@dimen/margin_medium_2"
+                android:drawableTint="@color/secondary_text"
+                android:text="@string/explore_categories"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/text_regular_3x" />
+
+            <ImageView
+                android:id="@+id/iv_divider_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_explore_categories"
+                android:layout_marginBottom="@dimen/margin_xxlarge"
+                android:src="@drawable/divider_margin_horizontal_line" />
+
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+</android.support.design.widget.CoordinatorLayout>
